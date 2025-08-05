@@ -75,3 +75,7 @@ wy_corr <- analysis_data %>%
 cat("South Yorkshire Correlation:", round(sy_corr, 3), "\n")
 cat("West Yorkshire Correlation:", round(wy_corr, 3), "\n")
 
+# Overall Linear Model
+lm_overall <- lm(DrugRate10k ~ Avg_ATT8, data = analysis_data)
+cat("\nOverall Linear Model Summary:\n")
+print(summary(lm_overall))
